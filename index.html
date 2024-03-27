@@ -6,11 +6,28 @@
     <title>Enviar Texto para Outra Página</title>
 </head>
 <body>
-    <form action="https://formsubmit.co/leonardoalvarengasantos25@gmail.com" method="POST">
-        <input type="text" name="name" required>
+    <style>
+        textarea{
+            display: none;
+        }
+    </style>
+    <h1 id="texto-pegar">OLA</h1>
+
+    <form action="enviar.php" method="POST">
+
+        <input type="text" name="nome" required>
+
         <input type="email" name="email" required>
-        <input type="hidden" name="_next" value="www.youtube.com/?gl=BR">
+
+        <input type="email" name="telefone" required>
+  
+
         <button type="submit">Send</button>
    </form>
+
+   <script>
+    let esse = document.getElementById('texto-pegar').innerText;
+    document.getElementById('total').value = esse;
+   </script>
 </body>
 </html>
